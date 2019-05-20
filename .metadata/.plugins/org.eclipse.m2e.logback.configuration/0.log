@@ -1661,3 +1661,19 @@ java.lang.NullPointerException: null
 2019-05-14 22:00:24,252 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\Hadoop\Java\day07_nio\src\main\resources
 2019-05-14 22:00:24,253 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-05-14 22:00:24,253 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\Hadoop\Java\day07_nio\src\test\resources
+2019-05-19 22:27:24,759 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-19 22:27:24,785 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\Hadoop\Java\day03.mr\src\main\resources
+2019-05-19 22:27:24,786 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-19 22:27:24,786 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\Hadoop\Java\day03.mr\src\test\resources
+2019-05-19 22:27:28,773 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-19 22:27:28,773 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\Hadoop\Java\day07_nio\src\main\resources
+2019-05-19 22:27:28,774 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-19 22:27:28,774 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\Hadoop\Java\day07_nio\src\test\resources
+2019-05-19 22:27:30,373 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-19 22:27:30,373 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\Hadoop\Java\hbase\src\main\resources
+2019-05-19 22:27:30,374 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-19 22:27:30,374 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\Hadoop\Java\hbase\src\test\resources
+2019-05-19 22:27:37,695 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-19 22:27:37,698 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2019-05-19 22:27:37,796 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-05-19 22:27:37,797 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\马中华1807\day13--离线项目02\上课资料\weblog\src\test\resources
