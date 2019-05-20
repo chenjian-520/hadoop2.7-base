@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Connection Name="My ZooKeeper" RootPath="/" SessionTimeout="5000" Version="1">
+<ZooKeeperServers>
+<ZooKeeperServer Host="192.168.66.131" Port="2181"/>
+<ZooKeeperServer Host="192.168.66.132" Port="2181"/>
+</ZooKeeperServers>
+<AuthInfos/>
+</Connection>

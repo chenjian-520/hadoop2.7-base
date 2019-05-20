@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.aura.hbase.day03.mr.App&apos; to &apos;ReadHBaseDataMR&apos;&#x0D;&#x0A;- Original project: &apos;day03.mr&apos;&#x0D;&#x0A;- Original element: &apos;com.aura.hbase.day03.mr.App&apos;&#x0D;&#x0A;- Renamed element: &apos;com.aura.hbase.day03.mr.ReadHBaseDataMR&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;App&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.aura.hbase.day03.mr{App.java[App" matchStrategy="1" name="ReadHBaseDataMR" qualified="false" references="true" similarDeclarations="false" stamp="1541124394519" textual="false" version="1.0"/>
+</session>

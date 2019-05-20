@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=BD1807_day07/F:\/Hadoop\/hadoop01\/hadoop-2.7.6\/share\/hadoop\/mapreduce\/hadoop-mapreduce-client-core-2.7.6.jar&lt;org.apache.hadoop.mapreduce(Mapper.class[Mapper" modifiers="33" timestamp="1524015560000"/>
+<typeInfo handle="=BD1807_day07/F:\/Hadoop\/hadoop01\/hadoop-2.7.6\/share\/hadoop\/mapreduce\/hadoop-mapreduce-client-core-2.7.6.jar&lt;org.apache.hadoop.mapreduce.lib.input(TextInputFormat.class[TextInputFormat" modifiers="33" timestamp="1524015560000"/>
+<typeInfo handle="=BD1807_day07/F:\/Hadoop\/hadoop01\/hadoop-2.7.6\/share\/hadoop\/mapreduce\/hadoop-mapreduce-client-core-2.7.6.jar&lt;org.apache.hadoop.mapreduce(RecordReader.class[RecordReader" modifiers="1057" timestamp="1524015560000"/>
+<typeInfo handle="=BD1807_day07/F:\/Hadoop\/hadoop01\/hadoop-2.7.6\/share\/hadoop\/mapreduce\/hadoop-mapreduce-client-core-2.7.6.jar&lt;org.apache.hadoop.mapreduce(Partitioner.class[Partitioner" modifiers="1057" timestamp="1524015560000"/>
+<typeInfo handle="=BD1807_day05/F:\/Hadoop\/hadoop01\/hadoop-2.7.6\/share\/hadoop\/common\/hadoop-common-2.7.6.jar&lt;org.apache.hadoop.io(WritableComparator.class[WritableComparator" modifiers="33" timestamp="1524015560000"/>
+<typeInfo handle="=BD1807_day07/F:\/Hadoop\/hadoop01\/hadoop-2.7.6\/share\/hadoop\/mapreduce\/hadoop-mapreduce-client-core-2.7.6.jar&lt;org.apache.hadoop.mapred(MapTask$MapOutputBuffer.class[MapOutputBuffer" modifiers="9" timestamp="1524015560000"/>
+<typeInfo handle="=BD1807_day07/F:\/Hadoop\/hadoop01\/hadoop-2.7.6\/share\/hadoop\/mapreduce\/hadoop-mapreduce-client-core-2.7.6.jar&lt;org.apache.hadoop.mapred(FileInputFormat.class[FileInputFormat" modifiers="1057" timestamp="1524015560000"/>
+<typeInfo handle="=BD1807_day07/F:\/Hadoop\/hadoop01\/hadoop-2.7.6\/share\/hadoop\/mapreduce\/hadoop-mapreduce-client-core-2.7.6.jar&lt;org.apache.hadoop.mapred(MapTask.class[MapTask" modifiers="33" timestamp="1524015560000"/>
+<typeInfo handle="=BD1807_day15/F:\/Hadoop\/day13-Hive\/hive安装包\/apache-hive-2.3.2-bin\/lib\/zookeeper-3.4.6.jar&lt;org.apache.zookeeper(ZooKeeper.class[ZooKeeper" modifiers="33" timestamp="1465850264000"/>
+<typeInfo handle="=BD1807_day15/F:\/Hadoop\/day13-Hive\/hive安装包\/apache-hive-2.3.2-bin\/lib\/zookeeper-3.4.6.jar&lt;org.apache.zookeeper(Watcher.class[Watcher" modifiers="1537" timestamp="1465850264000"/>
+<typeInfo handle="=BD1807_day05/F:\/Hadoop\/hadoop01\/hadoop-2.7.6\/share\/hadoop\/hdfs\/hadoop-hdfs-2.7.6.jar&lt;org.apache.hadoop.hdfs.server.namenode(NameNode.class[NameNode" modifiers="33" timestamp="1524015560000"/>
+<typeInfo handle="=day03.mr/F:\/mavenRepository\/org\/apache\/hadoop\/hadoop-hdfs\/2.5.1\/hadoop-hdfs-2.5.1.jar&lt;org.apache.hadoop.hdfs.server.namenode(NameNode.class[NameNode" modifiers="1" timestamp="1528687624000"/>
+</typeInfoHistroy>

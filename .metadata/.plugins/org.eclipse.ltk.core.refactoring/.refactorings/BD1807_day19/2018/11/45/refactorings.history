@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.ghgj.cn.zk&apos; to &apos;BD1807_hadoop_kaoshi02/src&apos;&#x0D;&#x0A;- Original project: &apos;BD1807_day19&apos;&#x0D;&#x0A;- Destination element: &apos;BD1807_hadoop_kaoshi02/src&apos;&#x0D;&#x0A;- Original element: &apos;BD1807_day19/src/com.ghgj.cn.zk&apos;" description="Copy package" destination="=BD1807_hadoop_kaoshi02/src" element1="/src&lt;com.ghgj.cn.zk" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1541760283171" version="1.0"/>
+</session>

@@ -1,0 +1,16 @@
+package com.ghgj01;
+
+import java.net.URI;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileSystem;
+
+public class DeleteHdfs {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Configuration conf = new Configuration();
+		FileSystem fs = FileSystem.get(new URI("hdfs://192.168.66.131:9000"), conf, "chen");
+	}
+
+}

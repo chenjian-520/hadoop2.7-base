@@ -1,0 +1,191 @@
+package com.aura.hbase.hbase;
+
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.hbase.Cell;
+import org.apache.hadoop.hbase.CellUtil;
+import org.apache.hadoop.hbase.HBaseConfiguration;
+import org.apache.hadoop.hbase.HColumnDescriptor;
+import org.apache.hadoop.hbase.HTableDescriptor;
+import org.apache.hadoop.hbase.TableName;
+import org.apache.hadoop.hbase.client.Admin;
+import org.apache.hadoop.hbase.client.Connection;
+import org.apache.hadoop.hbase.client.ConnectionFactory;
+import org.apache.hadoop.hbase.client.Delete;
+import org.apache.hadoop.hbase.client.Get;
+import org.apache.hadoop.hbase.client.Put;
+import org.apache.hadoop.hbase.client.Result;
+import org.apache.hadoop.hbase.client.ResultScanner;
+import org.apache.hadoop.hbase.client.Scan;
+import org.apache.hadoop.hbase.client.Table;
+import org.apache.hadoop.hbase.util.Bytes;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.aura.hbase.hbase.util.HBasePrintUtil;
+
+
+
+public class HBaseDemo_02 {
+	
+	private Connection connection;
+	private Admin admin;
+	private Table table;
+	
+	private static final String ZK_CONNECT_KEY = "hbase.zookeeper.quorum";
+	private static final String ZK_CONNECT_VALUE = "hadoop02:2181,hadoop03:2181,hadoop04:2181";
+	
+	private static final String TABLE_NAME = "test_api_01";
+	private static final String FAMILY01 = "cf1";
+
+	// 这是在所有的Test方法运行之前，运行一次
+	@Before
+	public void init() {
+			
+		Configuration config = HBaseConfiguration.create();
+		config.set(ZK_CONNECT_KEY, ZK_CONNECT_VALUE);
+		
+		try {
+			connection = ConnectionFactory.createConnection(config);
+			admin = connection.getAdmin();
+			table = connection.getTable(TableName.valueOf(TABLE_NAME));
+		} catch (IOException e) {
+			System.out.println("获取HBase数据库的连接失败");
+		}
+		
+//		System.out.println("before");
+	}
+
+	/**
+	 * 创建一张表
+	 */
+	@Test
+	public void createTable() {
+		
+		TableName tableName = TableName.valueOf(TABLE_NAME);
+		HTableDescriptor tableDesc = new HTableDescriptor(tableName);
+		
+		HColumnDescriptor cf1 = new HColumnDescriptor(FAMILY01);
+		tableDesc.addFamily(cf1);
+		
+		try {
+			admin.createTable(tableDesc);
+			System.out.println("创建表成功");
+		} catch (IOException e) {
+			System.out.println("创建表失败");
+		}
+
+//		System.out.println("createTable");
+	}
+	
+	
+	/**
+	 * hbase shell > put "user_info", "rk01", "info:name", "huangbo"
+	 */
+	@Test
+	public void testPut(){
+		
+		Put put = new Put(Bytes.toBytes("rk01"));
+		put.addColumn(FAMILY01.getBytes(), "age".getBytes(), "22".getBytes());
+		
+		try {
+			table.put(put);
+			System.out.println("插入成功一条数据");
+		} catch (IOException e) {
+			System.out.println("插入数据失败");
+		}
+		
+	}
+	
+	
+	/**
+	 * 对于API来说，要注意和shelL操作的区别：可以根据某个rowkey把整条记录删除
+	 */
+	@Test
+	public void testDelete(){
+		
+		Delete delete = new Delete("rk01".getBytes());
+		delete.addColumn(FAMILY01.getBytes(), "name".getBytes());
+		
+		try {
+			table.delete(delete);
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 查询某一条记录
+	 */
+	@Test
+	public void testGet() throws IOException{
+		
+		Table userTable = connection.getTable(TableName.valueOf("user_info"));
+		
+		Get get  = new Get("zhangsan_20150701_0006".getBytes());
+		Result result = userTable.get(get);
+		
+		List<Cell> cells = result.listCells();
+		for(Cell cell : cells ){
+			
+			System.out.println(Bytes.toString(CellUtil.cloneRow(cell)));
+			System.out.println(Bytes.toString(CellUtil.cloneFamily(cell)));
+			System.out.println(Bytes.toString(CellUtil.cloneQualifier(cell)));
+			System.out.println(Bytes.toString(CellUtil.cloneValue(cell)));
+			System.out.println(cell.getTimestamp());
+			System.out.println("----------------------------------------------------");
+		}
+		
+	}
+	
+	
+	@Test
+	public void testScan() throws Exception{
+		
+		Table userTable = connection.getTable(TableName.valueOf("user_info"));
+		
+		// 如果不传入参数，也就相当于shell操作: scan "user_info"
+		Scan scan  = new Scan();
+		scan.addColumn("base_info".getBytes(), "name".getBytes());
+		scan.setStartRow("zhangsan_20150701_0004".getBytes());
+		scan.setStopRow("zhangsan_20150701_0007".getBytes());
+		
+		
+		// 至少知道是一堆Result组成的
+		ResultScanner scanner = userTable.getScanner(scan);
+		
+		Iterator<Result> iterator = scanner.iterator();
+		while(iterator.hasNext()){
+			Result next = iterator.next();
+			
+			HBasePrintUtil.printResult(next);
+		}
+	}
+	
+	
+	/**
+	 * 检测某张表存在不存在
+	 */
+	@Test
+	public void tableExists() {
+		
+//		admin.tableExists
+//		System.out.println("tableExists");
+	}
+
+	@After
+	public void destroy() {
+		
+		try {
+			connection.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+//		System.out.println("after");
+	}
+}

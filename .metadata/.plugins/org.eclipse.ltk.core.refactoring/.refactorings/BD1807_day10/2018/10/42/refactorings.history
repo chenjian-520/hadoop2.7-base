@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;WorkAvg.java&apos; to &apos;BD1807_day12/src/com.ghgj.cn.kaoshi02&apos;&#x0D;&#x0A;- Original project: &apos;BD1807_day10&apos;&#x0D;&#x0A;- Destination element: &apos;BD1807_day12/src/com.ghgj.cn.kaoshi02&apos;&#x0D;&#x0A;- Original element: &apos;com.ghgj.cn.work.WorkAvg.java&apos;" description="Copy compilation unit" destination="=BD1807_day12/src&lt;com.ghgj.cn.kaoshi02" element1="/src&lt;com.ghgj.cn.work{WorkAvg.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1539760256973" units="1" version="1.0"/>
+</session>
